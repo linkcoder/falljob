@@ -7,5 +7,6 @@ public class ExcutorJDK {
 
     public static void main(String[] args) {
         ExecutorService executor= Executors.newCachedThreadPool();
+
     }
 }
