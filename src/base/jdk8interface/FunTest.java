@@ -1,4 +1,4 @@
-package jdk8interface;
+package base.jdk8interface;
 
 public class FunTest {
 

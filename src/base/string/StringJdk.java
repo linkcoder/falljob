@@ -1,4 +1,4 @@
-package string;
+package base.string;
 
 public class StringJdk {
 
