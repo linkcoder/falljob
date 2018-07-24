@@ -24,31 +24,27 @@ public class Solution {
     }
 
     public int romanToInt(String s) {
-        StringBuilder builder =new StringBuilder(s);
         int num=0;
-        int index=0;
-        while (index<=builder.length()-2){
-            String code=builder.substring(index,index+2);
-            if(table.containsKey(code)){
-                index+=2;
-            }else{
-                code= String.valueOf(code.charAt(0));
-                index++;
+        String code=null;
+        for(int i=0;i<s.length();i++){
+            boolean is2Exsist=false;
+            if(i+1<s.length()){
+                code=s.substring(i,i+2);
+                is2Exsist=table.containsKey(code);
             }
-            num=+table.get(code);
-        }
-
-        for(int i=index;i<builder.length();i++){
-            String code=builder.substring(i,i+1);
+            if(!is2Exsist){
+                code=s.substring(i,i+1);
+            }else {
+                i++;
+            }
             num+=table.get(code);
         }
-
         return num;
     }
 
     public static void main(String[] args) {
         Solution solution=new Solution();
-        System.out.println(solution.romanToInt("III"));
+        System.out.println(solution.romanToInt("MCMXCIV"));
     }
 
 }
