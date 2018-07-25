@@ -1,8 +1,6 @@
 package leetcode.c16;
 
-import jdk.internal.util.xml.impl.Pair;
-
-import java.util.*;
+import java.util.Arrays;
 
 public class Solution {
 
