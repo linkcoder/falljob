@@ -11,27 +11,28 @@ public class Solution {
     public List<String> generateParenthesis(int n) {
         List<String> result=new ArrayList<>();
         if(n!=0){
-            huishuo(0,n,result);
+            huishuo(0,n,n,n,result);
         }
         return result;
     }
 
-    private void huishuo(int index,int n,List<String> list){
+    private void huishuo(int index, int n, int l, int r, List<String> list){
         if(index==2*n){
-            System.out.println(builder.toString()+" :"+isGood(builder));
             if(isGood(builder)){
                 list.add(builder.toString());
             }
+            kuoStack.clear();
             return;
         }
 
-        for(int i=0;i<2;i++){
-            if(i==0){
-                builder.append('(');
-            }else {
-                builder.append(')');
-            }
-            huishuo(index+1,n,list);
+        if(l>0){
+            builder.append('(');
+            huishuo(index+1,n,l-1,r,list);
+            builder.deleteCharAt(builder.length()-1);
+        }
+        if(r>0){
+            builder.append(')');
+            huishuo(index+1,n,l,r-1,list);
             builder.deleteCharAt(builder.length()-1);
         }
 
