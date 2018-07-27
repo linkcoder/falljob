@@ -9,5 +9,11 @@ public class Cachepool {
         Integer z = Integer.valueOf(1222);
         Integer k = Integer.valueOf(1222);
         System.out.println(z == k);   //true
+//      Boolean.valueOf()
+//      Byte.valueOf()
+//        String
+//        StringBuilder
+//        StringBuffer
     }
+
 }

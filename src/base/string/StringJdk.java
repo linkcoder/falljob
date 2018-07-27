@@ -12,6 +12,11 @@ public class StringJdk {
         x.intern();
         String t="hello";
         System.out.println(x==t);//false
-        System.out.println(x.intern()==t);//引用相同
+        System.out.println(x.intern()==t);//引用;
+
+        String l=new String("hello")+new String("haha");
+        l.intern();
+        String l2="hellohaha";
+        System.out.println(l==l2);//true
     }
 }

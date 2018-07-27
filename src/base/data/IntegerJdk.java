@@ -8,5 +8,9 @@ public class IntegerJdk {
 
         System.out.println(e1==e2);
         System.out.println(e1==1);
+
+        short e3=1;
+//        e3 = e3+2;//编译错误
+        e3+=1;//默认转换，编译通过
     }
 }
