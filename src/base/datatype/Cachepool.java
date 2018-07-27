@@ -14,6 +14,8 @@ public class Cachepool {
 //        String
 //        StringBuilder
 //        StringBuffer
+
+//        Object
     }
 
 }
