@@ -11,5 +11,6 @@ public class MapJDK {
         Map current=new ConcurrentHashMap();
         Map link=new LinkedHashMap();
         Map tree=new TreeMap();
+
     }
 }
