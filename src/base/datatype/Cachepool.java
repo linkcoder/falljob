@@ -1,5 +1,7 @@
 package base.datatype;
 
+import java.util.Comparator;
+
 public class Cachepool {
 
     public static void main(String[] args) {
@@ -16,6 +18,7 @@ public class Cachepool {
 //        StringBuffer
 
 //        Object
+//        Comparator
     }
 
 }

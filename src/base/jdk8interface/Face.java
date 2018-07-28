@@ -1,5 +1,7 @@
 package base.jdk8interface;
 
+import java.util.function.Supplier;
+
 public interface Face {
 
     public static final int x=1;
@@ -9,5 +11,9 @@ public interface Face {
 
     default void fun2(){
         System.out.println("func2");
+    }
+
+    static void helo(){
+        System.out.println("hello");
     }
 }
