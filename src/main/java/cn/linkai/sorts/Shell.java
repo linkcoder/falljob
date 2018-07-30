@@ -16,10 +16,11 @@ public class Shell<T extends Comparable<T>> extends Sort<T> {
 
         while (h >= 1) {
             for (int i = h; i < N; i++)
-                for (int j = i; j >= h && less(nums[j], nums[j - h]); j -= h)
+                for (int j = i; j >= h && less(nums[j], nums[j - h]); j -= h){
                     swap(nums, j, j - h);
+                    printEveryResult(nums);
+                }
             h = h / 3;
-            printEveryResult(nums);
         }
         return nums;
     }
