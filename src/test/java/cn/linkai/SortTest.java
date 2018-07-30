@@ -48,4 +48,14 @@ public class SortTest {
         Quick<Integer> quick=new Quick<>();
         quick.sort(nums);
     }
+
+    @Test
+    public void testHeap(){
+        Integer[] nums={2,5,3,8,6,4,1,0};
+        Heap<Integer> heap=new Heap<>();
+        heap.sort(nums);
+        for (Integer e:nums) {
+            System.out.print(e+" ");
+        }
+    }
 }
