@@ -1,9 +1,6 @@
 package cn.linkai;
 
-import cn.linkai.sorts.Bubble;
-import cn.linkai.sorts.Insert;
-import cn.linkai.sorts.Selection;
-import cn.linkai.sorts.Shell;
+import cn.linkai.sorts.*;
 import org.junit.Test;
 
 public class SortTest {
@@ -34,5 +31,12 @@ public class SortTest {
         Integer[] nums={2,5,3,1,4,6,0,8};
         Shell<Integer> shell=new Shell<>();
         shell.sort(nums);
+    }
+
+    @Test
+    public void testMerge(){
+        Integer[] nums={2,5,3,1,4,6,0,8};
+        Merge<Integer> merge=new Merge<>();
+        merge.mergeSort(nums);
     }
 }
