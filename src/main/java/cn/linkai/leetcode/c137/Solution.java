@@ -1,7 +1,5 @@
 package cn.linkai.leetcode.c137;
 
-import java.util.Iterator;
-
 public class Solution {
 
     short l=128;
