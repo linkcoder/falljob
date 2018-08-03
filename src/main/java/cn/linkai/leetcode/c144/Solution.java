@@ -31,8 +31,6 @@ public class Solution {
         TreeNode t2=new TreeNode(2);
         TreeNode t3=new TreeNode(3);
 
-        t1.left=t3;
-        t1.right=t2;
 
         Solution solution=new Solution();
         List<Integer> re = solution.preorderTraversal(t1);
