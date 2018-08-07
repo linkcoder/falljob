@@ -6,7 +6,27 @@ import java.util.concurrent.Executors;
 public class ThreeSychronizedWay {
 
     public synchronized void test1(){
-        System.out.println("test1: "+Thread.currentThread().getId());
+        while(true) {
+            System.out.println("test1: "+Thread.currentThread().getId());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public synchronized void test11(){
+        while (true){
+            System.out.println("test11: "+Thread.currentThread().getId());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public void test2(){
@@ -27,39 +47,46 @@ public class ThreeSychronizedWay {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
 
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                test.test1();
-            }
+//        executorService.submit(new Runnable() {
+//            @Override
+//            public void run() {
+//                test.test1();
+//            }
+//        });
+//
+//        executorService.submit(new Runnable() {
+//            @Override
+//            public void run() {
+//                test.test2();
+//            }
+//        });
+//        executorService.submit(new Runnable() {
+//            @Override
+//            public void run() {
+//                test.test2();
+//            }
+//        });
+//
+//        executorService.submit(new Runnable() {
+//            @Override
+//            public void run() {
+//                test.test3();
+//            }
+//        });
+//
+//        executorService.submit(new Runnable() {
+//            @Override
+//            public void run() {
+//                test.test3();
+//            }
+//        });
+        executorService.submit(()->{
+            test.test11();
+        });
+        executorService.submit(()->{
+           test.test1();
         });
 
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                test.test2();
-            }
-        });
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                test.test2();
-            }
-        });
-
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                test.test3();
-            }
-        });
-
-        executorService.submit(new Runnable() {
-            @Override
-            public void run() {
-                test.test3();
-            }
-        });
 
     }
 }
