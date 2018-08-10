@@ -1,4 +1,4 @@
-package cn.linkai.leetcode.c106.c105;
+package cn.linkai.leetcode.c106;
 
 public class Solution {
 
