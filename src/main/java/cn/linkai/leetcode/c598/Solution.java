@@ -6,7 +6,6 @@ public class Solution {
 
     public int maxCount(int m, int n, int[][] ops) {
         if(ops==null || ops.length==0) return m*n;
-
         int[] l1=new int[ops.length];
         int[] l2=new int[ops.length];
         for(int i=0;i<ops.length;i++){
