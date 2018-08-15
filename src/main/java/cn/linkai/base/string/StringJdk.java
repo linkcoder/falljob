@@ -22,6 +22,10 @@ public class StringJdk {
         System.out.println(l==l2);//true
     }
 
+    protected class hello{
+
+    }
+
     @Test
     public void test(){
         String s = new String("1");
