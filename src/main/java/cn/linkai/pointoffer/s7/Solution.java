@@ -7,26 +7,17 @@ public class Solution {
     public int minNumberInRotateArray(int [] array) {
         if(array==null || array.length==0) return 0;
 
-        int minIndex=findMINIndex(array);
-        int min=array[minIndex];
+        int l=0,h=array.length-1;
 
-        if(minIndex==0) return min;
-
-        int[] tmp=new int[minIndex];
-
-        for(int i=0;i<minIndex;i++){
-            tmp[i]=array[i];
+        while(l<h){
+            int mid=(l+h)/2;
+            if(array[mid]<=array[h]){
+                h=mid;
+            }else{
+                l=mid+1;
+            }
         }
-        int nex=minIndex;
-        for(;nex<array.length;nex++){
-            array[nex-minIndex]=array[nex];
-        }
-        int len=nex-minIndex;
-        for(int i=len;i<array.length;i++){
-            array[i]=tmp[i-len];
-        }
-        return min;
-
+        return array[l];
     }
 
     public int minNumberInRotateArray2(int [] array) {
@@ -52,6 +43,7 @@ public class Solution {
 
     }
 
+
     private int findMINIndex(int[] array) {
         int minIndex=0;
         for(int i=0;i<array.length;i++){
@@ -64,10 +56,9 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution=new Solution();
         int[] arr={3,4,5,1,2};
-        int min = solution.minNumberInRotateArray2(arr);
+        int min = solution.minNumberInRotateArray(arr);
         System.out.println(min);
-        for(int e:arr)
-            System.out.println(e);
+
     }
 
 }
