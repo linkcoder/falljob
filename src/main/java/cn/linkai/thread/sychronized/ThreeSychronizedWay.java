@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 public class ThreeSychronizedWay {
 
     public synchronized void test1(){
-        while(true) {
+        while(true) {//如果这里一直是运行test1的方法，则锁门sychronized在同步的时候不会释放锁
             System.out.println("test1: "+Thread.currentThread().getId());
             try {
                 Thread.sleep(1000);
