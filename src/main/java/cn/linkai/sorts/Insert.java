@@ -3,9 +3,9 @@ package cn.linkai.sorts;
 public class Insert <T extends Comparable<T>> extends Sort<T>{
     /**
      * 插入排序
-     * 时间复杂度：N^2
+     * 时间复杂度：N--N^2
      * 空间复杂度：1
-     * 次数：N
+     * 稳定性：稳定
      */
     @Override
     public T[] sort(T[] nums) {
