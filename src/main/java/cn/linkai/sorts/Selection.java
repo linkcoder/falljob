@@ -1,7 +1,5 @@
 package cn.linkai.sorts;
 
-import java.util.Collections;
-
 public class Selection<T extends Comparable<T>> extends Sort<T>{
 
     /**
