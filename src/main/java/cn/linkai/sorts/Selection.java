@@ -6,7 +6,7 @@ public class Selection<T extends Comparable<T>> extends Sort<T>{
      * 选择排序
      * 时间复杂度：N^2
      * 空间复杂度：1
-     * 稳定性：稳定
+     * 稳定性：不稳定
      */
     public T[] sort(T[] nums) {
         int length=nums.length;
