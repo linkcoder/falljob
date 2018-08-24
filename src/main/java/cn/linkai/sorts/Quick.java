@@ -1,6 +1,13 @@
 package cn.linkai.sorts;
 
 public class Quick<T extends Comparable<T>> extends Sort<T> {
+
+    /**
+     *  快速排序
+     *  时间复杂度：N*Log2N--N^2(N*Log2N)
+     *  空间复杂度：N*Log2N
+     *  稳定性：不稳定
+     */
     @Override
     public T[] sort(T[] nums) {
         quickSort(nums,0,nums.length-1);
