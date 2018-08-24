@@ -3,8 +3,9 @@ package cn.linkai.sorts;
 public class Bubble<T extends Comparable<T>> extends Sort<T> {
     /**
      * 冒泡排序
-     * 时间复杂度：N^2
+     * 时间复杂度：N--N^2（N^2）
      * 空间复杂度: 1
+     * 稳定性：稳定（排序前后相对位置不变）
      */
     @Override
     public T[] sort(T[] nums) {
