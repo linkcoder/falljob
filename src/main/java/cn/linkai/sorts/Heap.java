@@ -3,6 +3,13 @@ package cn.linkai.sorts;
 public class Heap <T extends Comparable<T>> extends Sort<T> {
 
     //数据从nums[1]开始
+
+    /**
+     * 堆排序
+     * 时间复杂度 N*Log2N （N*Log2N）
+     * 空间复杂度 1
+     * 稳定：不稳定
+     */
     @Override
     public T[] sort(T[] nums) {
         return nums;
