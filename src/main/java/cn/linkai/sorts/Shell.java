@@ -3,7 +3,7 @@ package cn.linkai.sorts;
 public class Shell<T extends Comparable<T>> extends Sort<T> {
     /**
      * 希尔排序
-     * 时间复杂度：N^1.3 ~ N^2
+     * 时间复杂度：N^1..3 ~ N^2（N）
      * 空间复杂度：1
      * 稳定性：不稳定
      */
