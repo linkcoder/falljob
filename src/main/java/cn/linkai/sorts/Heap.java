@@ -113,6 +113,10 @@ public class Heap <T extends Comparable<T>> extends Sort<T> {
         for (i = n / 2 - 1; i >= 0; i--)
             minHeapDown(a, i, n-1);
 
+        for(int e:a) {
+            System.out.print(e + " ");
+        }
+        System.out.println();
         // 从最后一个元素开始对序列进行调整，不断的缩小调整的范围直到第一个元素
         for (i = n - 1; i > 0; i--) {
             // 交换a[0]和a[i]。交换后，a[i]是a[0...i]中最小的。
@@ -127,15 +131,15 @@ public class Heap <T extends Comparable<T>> extends Sort<T> {
 
     public static void main(String[] args) {
         int i;
-        int a[] = {20,30,90,40,70,110,60,10,100,50,80};
-
+//        int a[] = {20,30,90,40,70,110,60,10,100,50,80};
+        int a[] = {1,8,6,2,5,4,7,3};
         System.out.printf("before sort:");
         for (i=0; i<a.length; i++)
             System.out.printf("%d ", a[i]);
         System.out.printf("\n");
 
-        heapSortAsc(a, a.length);            // 升序排列
-        //heapSortDesc(a, a.length);        // 降序排列
+//        heapSortAsc(a, a.length);            // 升序排列
+        heapSortDesc(a, a.length);        // 降序排列
 
         System.out.printf("after  sort:");
         for (i=0; i<a.length; i++)
