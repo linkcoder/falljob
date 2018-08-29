@@ -7,6 +7,7 @@ import java.util.Queue;
 public class Solution {
 
     ArrayList<ArrayList<Integer>> Print(TreeNode pRoot) {
+
         ArrayList<ArrayList<Integer>> res=new ArrayList<>();
 
         if(pRoot==null) return res;
