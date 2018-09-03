@@ -8,18 +8,22 @@ public class StringJdk {
         String j="hello";
         String k="hello";
         System.out.println(j==k);//true
-        String x=new String("hello");
-        String y=new String("hello");
+        String x=new String("helloe");
+        String y=new String("helloe");
         System.out.println(x==y);//false
         x.intern();
-        String t="hello";
+        String t="helloe";
         System.out.println(x==t);//false
         System.out.println(x.intern()==t);//引用;
 
         String l=new String("hello")+new String("haha");
-        l.intern();
+
         String l2="hellohaha";
+        String l3="hello"+"haha";
+        l.intern();
         System.out.println(l==l2);//true
+        System.out.println(l==l3);
+        System.out.println(l2==l3);
     }
 
     protected class hello{
