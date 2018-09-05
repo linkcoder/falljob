@@ -18,4 +18,13 @@ public class Solution {
     public char FirstAppearingOnce() {
         return queue.isEmpty() ? '#' : queue.peek();
     }
+
+    public static void main(String[] args) {
+        Solution solution=new Solution();
+        solution.Insert('g');
+        solution.Insert('o');
+        solution.Insert('o');
+        char c = solution.FirstAppearingOnce();
+        System.out.println(c);
+    }
 }

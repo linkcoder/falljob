@@ -1,4 +1,4 @@
-package cn.linkai.wangyitest.newcode2;
+package cn.linkai.newcodetest.wangyitest.newcode2;
 
 import java.util.Scanner;
 
