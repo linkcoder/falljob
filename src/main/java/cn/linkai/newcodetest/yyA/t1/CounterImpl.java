@@ -1,23 +1,26 @@
 package cn.linkai.newcodetest.yyA.t1;
 
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class CounterImpl implements Counter{
 
-    private ConcurrentHashMap<String,Integer> container=new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String, AtomicInteger> container=new ConcurrentHashMap<>();
 
     @Override
     public int get(String str) {
-        return container.get(str)==null?0:container.get(str);
+        return container.get(str)==null?0:container.get(str).get();
     }
 
     @Override
-    public synchronized void add(String str) {
-        boolean hasKey=container.containsKey(str);
-        if(hasKey){
-            container.put(str,container.get(str)+1);
-        }else{
-            container.put(str,1);
+    public void add(String str) {
+        if (container.containsKey(str)) {
+            container.get(str).getAndIncrement();
+        } else {
+            synchronized (container) {
+                if(!container.containsKey(str))
+                    container.put(str, new AtomicInteger(1));
+            }
         }
     }
 
