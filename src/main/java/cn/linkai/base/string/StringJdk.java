@@ -14,14 +14,14 @@ public class StringJdk {
         x.intern();
         String t="helloe";
         System.out.println(x==t);//false
-        System.out.println(x.intern()==t);//引用;
+        System.out.println(x.intern()==t);//true;
 
         String l=new String("hello")+new String("haha");
-
+//        l.intern(); true true true
         String l2="hellohaha";
         String l3="hello"+"haha";
-        l.intern();
-        System.out.println(l==l2);//true
+        l.intern(); //false false true
+        System.out.println(l==l2);//false
         System.out.println(l==l3);
         System.out.println(l2==l3);
     }

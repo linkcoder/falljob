@@ -1,5 +1,7 @@
 package cn.linkai.base.data;
 
+import java.math.BigDecimal;
+
 public class IntegerJdk {
 
     public static void main(String[] args) {
